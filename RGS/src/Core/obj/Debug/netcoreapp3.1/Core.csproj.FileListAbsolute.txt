@@ -1,0 +1,9 @@
+C:\Users\shiva\source\repos\RGS\src\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+C:\Users\shiva\source\repos\RGS\src\Core\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\shiva\source\repos\RGS\src\Core\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\shiva\source\repos\RGS\src\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\shiva\source\repos\RGS\src\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\shiva\source\repos\RGS\src\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\shiva\source\repos\RGS\src\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\shiva\source\repos\RGS\src\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\shiva\source\repos\RGS\src\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache

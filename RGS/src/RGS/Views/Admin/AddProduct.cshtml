@@ -1,0 +1,76 @@
+﻿@model ViewModels.Models.ProductCatListViewModel
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);">
+            <h4 class="text-center pt-3">Add Product</h4>
+            @using (Html.BeginForm("AddProduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="row col-12 my-4">
+                    <div class="col-12">
+                        <div class="row col-12 py-2">
+                            <label for="example-text-input" class="col-2 offset-1 col-form-label">
+                                <strong class="required">Name :</strong>
+                            </label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="Product Name" name="ProductName" maxlength="50" title="Only alphabet alllowed." pattern="^[a-zA-Z\s]{1,}[a-zA-Z]{1,}$" required />
+                            </div>
+                        </div>
+                        <div class="row col-12 py-2">
+                            <label for="example-text-input" class="col-2 offset-1 col-form-label">
+                                <strong class="required">Description :</strong>
+                            </label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" placeholder="Product Description" name="ProductDescription" maxlength="150" title="Only alphabet alllowed." pattern="^[a-zA-Z\s]{1,}[a-zA-Z]{1,}$" required />
+                            </div>
+                        </div>
+                        <div class="row col-12 py-2">
+                            <label for="example-text-input" class="col-2 offset-1 col-form-label">
+                                <strong class="required">Price :</strong>
+                            </label>
+                            <div class="col-9">
+                                <input type="number" class="form-control" placeholder="Product Price" name="ProductPrice" step="0.01" min="0.50" max="1000000" required />
+                            </div>
+                            <label for="example-text-input" class="col-2 offset-1 col-form-label">
+                                <strong class="required">Product Qty :</strong>
+                            </label>
+                            <div class="col-9">
+                                <input type="number" class="form-control" placeholder="Product Quantity" name="ProductQty" required />
+                            </div>
+                        </div>
+                        <div class="row col-12 py-2">
+                            <label for="example-text-input" class="col-2 offset-1 col-form-label">
+                                <strong class="required">Category:</strong>
+                            </label>
+                            <div class="col-9">
+                                <select class="form-control" title="Product Category" name="ProductCategory" required>
+                                    <option value="">Select Product Category</option>
+                                    @foreach (var item in Model.productCatViewModels)
+                                    {
+                                        <option value="@item.Id">@item.CategoryName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row col-12 py-2">
+                            <label for="example-text-input" class="col-2 offset-1 col-form-label">
+                                <strong class="required">Choose Image :</strong>
+                            </label>
+                            <div class="col-9">
+                                <input type="file" id="uploadfile" name="Image" accept=".jpg,.jpeg,.png" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pb-3">
+                    <button type="submit" class="btn btn-success btn-font">Save</button>
+                    <a href="~/Admin/Index" class="btn btn-danger loaderClick btn-font">Back</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

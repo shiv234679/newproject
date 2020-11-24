@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_WebLayout.cshtml";
+}
+<!-- Sign up form -->
+<section class="signup" style="margin:0px;">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+                <h2 class="form-title">Sign up</h2>
+                @*<form method="POST" class="register-form" action="@Url.Action("SingUp","Account")">*@
+                    @using (Html.BeginForm("SignUp", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="form-group">
+                            <label for="UserName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="UserName" placeholder="Your Full Name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="EmailId"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="EmailId" placeholder="Your Email Address" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="MobileNumber"><i class="zmdi zmdi-phone"></i></label>
+                            <input type="number" name="MobileNumber" placeholder="Your Mobile Number" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="Address"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="Address" placeholder="Your Full Address" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="Password"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="Password" placeholder="Your Password" required />
+                        </div>
+                        <div class="form-group">
+                            <label><i class="zmdi zmdi-lock-outline"></i></label>
+                            <input type="password" placeholder="Repeat your password" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" class="form-submit" value="Register" />
+                        </div>
+                    }
+                    @*</form>*@
+            </div>
+            <div class="signup-image">
+                <figure><img src="~/web/images/signup-image.jpg" alt="sing up image"></figure>
+                <a href="/Account/LogIn" class="signup-image-link">I am already member</a>
+            </div>
+        </div>
+    </div>
+</section>
+

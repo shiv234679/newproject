@@ -1,0 +1,14 @@
+C:\Users\shiva\source\repos\RGS\src\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\shiva\source\repos\RGS\src\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\shiva\source\repos\RGS\src\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\shiva\source\repos\RGS\src\ViewModels\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\shiva\source\repos\RGS\src\ViewModels\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\shiva\source\repos\RGS\src\ViewModels\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\shiva\source\repos\RGS\src\ViewModels\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\shiva\source\repos\RGS\src\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+C:\Users\shiva\source\repos\RGS\src\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\shiva\source\repos\RGS\src\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\shiva\source\repos\RGS\src\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\shiva\source\repos\RGS\src\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\shiva\source\repos\RGS\src\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\shiva\source\repos\RGS\src\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb

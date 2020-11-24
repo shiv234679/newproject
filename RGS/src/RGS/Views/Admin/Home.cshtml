@@ -1,0 +1,57 @@
+﻿@model ViewModels.Models.ProductCatListViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="m-content">
+    <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);">
+            <h4 class="p-3">Product Category management</h4>
+            <div class="justify-content-end row pr-4">
+                <a href="~/Admin/AddProductCategory" class="btn btn-outline-info btn-font m-btn--air m-btn--pill">Add Product Category</a>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <table id="myTable" class="display pb-3" width="100%">
+                        <thead>
+                            <tr>
+                                <th class="text-center" title="Sr.No">Sr.No</th>
+                                <th class="text-center" title="Category Name">Category Name</th>
+                                <th class="text-center" title="Category Image">Category Image</th>
+                                <th class="text-center" title="Action">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{var count = 1; var listData = Model.productCatViewModels.OrderByDescending(x => x.Id);}
+                            @foreach (var item in listData)
+                            {
+                                <tr>
+                                    <td class="text-center">@count</td>
+                                    <td class="text-center">@item.CategoryName</td>
+                                    <td class="text-center">
+                                        <img src="@item.ImageUrl" width="80" height="80" />
+                                    </td>
+                                    <td class="text-center">
+                                        <span>
+                                            <a href="~/Admin/EditProductCategory?Id=@item.Id" title="Edit">Edit</a>
+                                            @if (item.IsActive == true)
+                                            {
+                                                <a href="#" title="Block" onclick="return fnConfirm(@item.Id,'Block',event); return false;">Block</a>
+                                            }
+                                            else
+                                            {
+                                                <a href="#" title="Un-block" onclick="return fnConfirm(@item.Id, 'Unblock', event); return false;">Unblock</a>
+                                            }
+                                            <a href="#" title="Delete" onclick="return fnDelete(@item.Id,'Delete',event); return false;">Delete</a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
